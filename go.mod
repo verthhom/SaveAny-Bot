@@ -60,3 +60,6 @@ require (
 	gopkg.in/ini.v1 v1.67.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+// Personal fork - studying how the bot handles rclone storage backends
+// Upstream: https://github.com/krau/SaveAny-Bot
