@@ -1,4 +1,4 @@
-module github.com/krau/SaveAny-Bot
+module github.com/yourusername/SaveAny-Bot
 
 go 1.22
 
