@@ -63,3 +63,8 @@ require (
 
 // Personal fork - studying how the bot handles rclone storage backends
 // Upstream: https://github.com/krau/SaveAny-Bot
+//
+// Notes:
+//   - Tracking rclone v1.68.1 to understand how remote backend selection works
+//   - TODO: look into whether gotgproto beta18 has any breaking changes from beta17
+//     that affect the file download handler
