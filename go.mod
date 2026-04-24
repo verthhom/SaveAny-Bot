@@ -68,3 +68,7 @@ require (
 //   - Tracking rclone v1.68.1 to understand how remote backend selection works
 //   - TODO: look into whether gotgproto beta18 has any breaking changes from beta17
 //     that affect the file download handler
+//   - Checked gotgproto beta18 changelog: the main breaking change from beta17 is
+//     that UpdateHandler now requires an explicit context cancellation pattern;
+//     the file download handler in this project should be fine since it already
+//     uses context.WithCancel properly
