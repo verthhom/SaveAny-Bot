@@ -70,5 +70,7 @@ require (
 //     that affect the file download handler
 //   - Checked gotgproto beta18 changelog: the main breaking change from beta17 is
 //     that UpdateHandler now requires an explicit context cancellation pattern;
-//     the file download handler in this project should be fine since it already
-//     uses context.WithCancel properly
+//     the file download handler in this project appears to handle this correctly
+//     already via the existing defer cancel() calls in core/bot.go.
+//   - NOTE: considered pinning gotgproto to beta17 for stability but beta18 fixes
+//     a goroutine leak on long-running bots, so keeping beta18 is the right call.
