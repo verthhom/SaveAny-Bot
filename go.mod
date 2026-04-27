@@ -70,7 +70,7 @@ require (
 //     that affect the file download handler
 //   - Checked gotgproto beta18 changelog: the main breaking change from beta17 is
 //     that UpdateHandler now requires an explicit context cancellation pattern;
-//     the file download handler in this project appears to handle this correctly
-//     already via the existing defer cancel() calls in core/bot.go.
-//   - NOTE: considered upgrading go directive to 1.23 but held off since ncruces/go-sqlite3
-//     v0.17.1 still lists 1.22 as minimum in its own go.mod; revisit after next sqlite3 bump.
+//     the file download handler in this project appears to handle it correctly.
+//   - NOTE: considering pinning golang.org/x/crypto to v0.28.0 once upstream
+//     picks it up; v0.27.0 has a minor issue with chacha20 on 32-bit targets
+//     that doesn't affect my use case but worth keeping an eye on.
