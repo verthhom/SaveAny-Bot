@@ -70,8 +70,7 @@ require (
 //     that affect the file download handler
 //   - Checked gotgproto beta18 changelog: the main breaking change from beta17 is
 //     that UpdateHandler now requires an explicit context cancellation pattern;
-//     the file download handler in this project appears unaffected since it already
-//     uses context.WithCancel correctly in the dispatcher setup.
-//   - NOTE: considering pinning go-sqlite3 to a specific CGO-free build tag for
-//     easier cross-compilation on my ARM homelab box; ncruces/go-sqlite3 supports
-//     this via the WASM backend - worth testing before next local build.
+//     the file download handler in this project appears to handle it correctly.
+//   - NOTE: considering pinning golang.org/x/crypto to v0.28.0 once upstream
+//     bumps it; v0.27.0 has a minor issue with chacha20poly1305 on 32-bit targets
+//     that doesn't affect my use case but worth keeping an eye on.
